@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dony Cahyanto - Junior Web Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'inter': ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#1d2331',
+                        secondary: '#b6ff00',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-inter bg-white text-primary">
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+        <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="text-xl font-bold">Dony Cahyanto</div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#home" class="font-medium hover:text-secondary transition-colors">Home</a>
+                <a href="#about" class="font-medium hover:text-secondary transition-colors">About</a>
+                <a href="#projects" class="font-medium hover:text-secondary transition-colors">Projects</a>
+                <a href="#contact" class="font-medium hover:text-secondary transition-colors">Contact</a>
+            </div>
+            <button class="md:hidden">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="min-h-screen pt-20 flex items-center">
+        <div class="max-w-6xl mx-auto px-6 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="space-y-6">
+                    <div class="inline-flex items-center px-4 py-2 bg-secondary text-primary rounded-full text-sm font-medium">
+                        🎓 RevoU Software Engineering Camp
+                    </div>
+                    
+                    <h1 class="text-4xl md:text-5xl font-bold leading-tight">
+                        Hi, I'm <span class="text-secondary">Dony Cahyanto</span>
+                    </h1>
+                    
+                    <p class="text-lg text-gray-600 leading-relaxed">
+                        Junior Web Developer passionate about creating clean, functional, 
+                        and user-friendly websites. Currently expanding my skills through 
+                        hands-on projects and continuous learning.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#projects" class="px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-opacity-90 transition-colors text-center">
+                            View My Work
+                        </a>
+                        <a href="#contact" class="px-6 py-3 border border-primary text-primary rounded-lg font-medium hover:bg-primary hover:text-white transition-colors text-center">
+                            Get In Touch
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Profile Image -->
+                <div class="flex justify-center">
+                    <div class="relative">
+                        <img src="https://picsum.photos/400/400" alt="Dony Cahyanto" 
+                             class="rounded-2xl w-full max-w-sm shadow-lg">
+                        <div class="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary rounded-2xl -z-10"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <!-- About Section - Scalable for Multiple Bootcamps -->
+<section id="about" class="py-20 bg-gray-50">
+    <div class="max-w-4xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
+        
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
+            <!-- Professional Summary -->
+            <div class="bg-white p-8 rounded-xl shadow-sm">
+                <div class="flex items-center mb-6">
+                    <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
+                    <h3 class="text-xl font-semibold">Professional Summary</h3>
+                </div>
+                <p class="text-gray-600 mb-4">
+                    Junior Web Developer yang terus mengembangkan skills melalui bootcamp intensif 
+                    dan hands-on projects. Passionate dalam menciptakan website yang 
+                    <span class="text-secondary font-medium">clean, functional, dan user-friendly</span>.
+                </p>
+                <p class="text-gray-600">
+                    Memiliki foundation kuat dalam <span class="text-secondary font-medium">modern web technologies</span> 
+                    dan terus belajar framework serta tools terbaru untuk meningkatkan kemampuan development.
+                </p>
+            </div>
+
+            <!-- Education & Skills -->
+            <div class="space-y-6">
+                <!-- Bootcamps -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-semibold mb-4 flex items-center">
+                        <span class="text-secondary mr-3">🎓</span>
+                        Bootcamps & Certifications
+                    </h4>
+                    <div class="space-y-4">
+                        <!-- Bootcamp 1 -->
+                        <div class="border-l-2 border-secondary pl-4">
+                            <div class="font-medium text-primary">RevoU</div>
+                            <div class="text-sm text-gray-600">Software Engineering Certificate</div>
+                            <div class="text-xs text-gray-500">Oct 2025 • 1-Week Intensive</div>
+                        </div>
+                        
+                        <!-- Bootcamp 2 (Placeholder for future) -->
+                        <div class="border-l-2 border-gray-300 pl-4 opacity-70">
+                            <div class="font-medium text-gray-500">Upcoming Bootcamp</div>
+                            <div class="text-sm text-gray-400">Full-Stack Development</div>
+                            <div class="text-xs text-gray-400">2025 • In Planning</div>
+                        </div>
+
+                        <!-- Bootcamp 3 (Placeholder for future) -->
+                        <div class="border-l-2 border-gray-300 pl-4 opacity-70">
+                            <div class="font-medium text-gray-500">Future Certification</div>
+                            <div class="text-sm text-gray-400">Advanced JavaScript</div>
+                            <div class="text-xs text-gray-400">2025 • Planned</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Core Skills -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <h4 class="font-semibold mb-4 flex items-center">
+                        <span class="text-secondary mr-3">⚡</span>
+                        Technical Skills
+                    </h4>
+                    <div class="grid grid-cols-2 gap-3">
+                        <div class="flex items-center">
+                            <div class="text-secondary mr-2">▹</div>
+                            <span class="text-sm">HTML5</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-secondary mr-2">▹</div>
+                            <span class="text-sm">CSS3</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-secondary mr-2">▹</div>
+                            <span class="text-sm">JavaScript</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-secondary mr-2">▹</div>
+                            <span class="text-sm">Tailwind CSS</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-secondary mr-2">▹</div>
+                            <span class="text-sm">Git & GitHub</span>
+                        </div>
+                        <div class="flex items-center">
+                            <div class="text-secondary mr-2">▹</div>
+                            <span class="text-sm">Responsive Design</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Learning Journey -->
+        <div class="mt-12 bg-white p-8 rounded-xl shadow-sm">
+            <h3 class="text-xl font-semibold mb-6 text-center">My Learning Journey</h3>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+                <div class="p-4">
+                    <div class="text-secondary text-2xl mb-3">🔰</div>
+                    <h4 class="font-semibold mb-2">Foundation</h4>
+                    <p class="text-gray-600 text-sm">
+                        HTML, CSS, JavaScript basics & Responsive Web Design
+                    </p>
+                </div>
+                <div class="p-4">
+                    <div class="text-secondary text-2xl mb-3">🚀</div>
+                    <h4 class="font-semibold mb-2">Current Focus</h4>
+                    <p class="text-gray-600 text-sm">
+                        Advanced JavaScript, React.js, and Backend Development
+                    </p>
+                </div>
+                <div class="p-4">
+                    <div class="text-secondary text-2xl mb-3">🎯</div>
+                    <h4 class="font-semibold mb-2">Future Goals</h4>
+                    <p class="text-gray-600 text-sm">
+                        Full-Stack Development, Mobile Apps, and Cloud Technologies
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Projects Section - IMPROVED -->
+<section id="projects" class="py-20">
+    <div class="max-w-6xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-4">Featured Projects</h2>
+        <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+            Beberapa project yang saya kembangkan selama perjalanan belajar web development
+        </p>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- Project 1 - Highlighted -->
+            <div class="bg-white border-2 border-secondary rounded-xl p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
+                <div class="flex items-center mb-3">
+                    <div class="w-3 h-3 bg-secondary rounded-full mr-2"></div>
+                    <span class="text-sm font-medium text-secondary">Featured Project</span>
+                </div>
+                <h3 class="text-xl font-semibold mb-3">Personal Portfolio Website</h3>
+                <p class="text-gray-600 mb-4">
+                    Website portfolio responsive yang menampilkan skill, project, dan kontak. 
+                    Dibangun dengan pendekatan mobile-first dan best practices.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-primary text-white text-sm rounded-full">HTML5</span>
+                    <span class="px-3 py-1 bg-primary text-white text-sm rounded-full">CSS3</span>
+                    <span class="px-3 py-1 bg-primary text-white text-sm rounded-full">JavaScript</span>
+                    <span class="px-3 py-1 bg-primary text-white text-sm rounded-full">Tailwind</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="flex items-center text-secondary font-medium hover:text-primary transition-colors">
+                        <span class="mr-2">🌐</span>
+                        Live Demo
+                    </a>
+                    <a href="https://github.com/Donycahyanto/portfolio" class="flex items-center text-secondary font-medium hover:text-primary transition-colors">
+                        <span class="mr-2">⚡</span>
+                        Source Code
+                    </a>
+                </div>
+            </div>
+
+            <!-- Project 2 -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold mb-3">Task Management App</h3>
+                <p class="text-gray-600 mb-4">
+                    Aplikasi manajemen tugas sederhana dengan fitur CRUD lengkap dan local storage.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">HTML</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">CSS</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">JavaScript</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-600 font-medium hover:text-secondary transition-colors">Live Demo</a>
+                    <a href="https://github.com/Donycahyanto/todo-app" class="text-gray-600 font-medium hover:text-secondary transition-colors">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 3 -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold mb-3">Landing Page Business</h3>
+                <p class="text-gray-600 mb-4">
+                    Landing page modern untuk business dengan design yang clean dan responsive.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">HTML</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">CSS</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">Tailwind</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-600 font-medium hover:text-secondary transition-colors">Live Demo</a>
+                    <a href="https://github.com/Donycahyanto/landing-page" class="text-gray-600 font-medium hover:text-secondary transition-colors">GitHub</a>
+                </div>
+            </div>
+
+            <!-- Project 4 -->
+            <div class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow">
+                <h3 class="text-xl font-semibold mb-3">Weather App</h3>
+                <p class="text-gray-600 mb-4">
+                    Aplikasi cuaca dengan API integration dan responsive interface.
+                </p>
+                <div class="flex flex-wrap gap-2 mb-4">
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">HTML</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">CSS</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">JavaScript</span>
+                    <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">API</span>
+                </div>
+                <div class="flex space-x-4">
+                    <a href="#" class="text-gray-600 font-medium hover:text-secondary transition-colors">Live Demo</a>
+                    <a href="https://github.com/Donycahyanto/weather-app" class="text-gray-600 font-medium hover:text-secondary transition-colors">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-gray-50">
+        <div class="max-w-4xl mx-auto px-6">
+            <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Contact Info -->
+                <div class="space-y-6">
+                    <p class="text-lg text-gray-600">
+                        I'm always open to discussing new opportunities and interesting projects.
+                    </p>
+                    
+                    <div class="space-y-4">
+                        <a href="mailto:donycahyanto99@gmail.com" class="flex items-center text-gray-700 hover:text-secondary transition-colors">
+                            <span class="mr-3">📧</span>
+                            donycahyanto99@gmail.com
+                        </a>
+                        <a href="https://linkedin.com/in/dony-cahyanto" class="flex items-center text-gray-700 hover:text-secondary transition-colors">
+                            <span class="mr-3">💼</span>
+                            LinkedIn Profile
+                        </a>
+                        <a href="https://github.com/Donycahyanto" class="flex items-center text-gray-700 hover:text-secondary transition-colors">
+                            <span class="mr-3">⚡</span>
+                            GitHub Profile
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Contact Form -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <form class="space-y-4">
+                        <input type="text" placeholder="Your Name" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary">
+                        <input type="email" placeholder="Your Email" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary">
+                        <textarea placeholder="Your Message" rows="5" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-secondary"></textarea>
+                        <button type="submit" class="w-full px-6 py-3 bg-primary text-white rounded-lg font-medium hover:bg-opacity-90 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-primary text-white text-center">
+        <div class="max-w-6xl mx-auto px-6">
+            <p>&copy; 2024 Dony Cahyanto. All rights reserved.</p>
+            <p class="text-sm text-gray-300 mt-2">Built with passion and attention to detail</p>
+        </div>
+    </footer>
+
+    <script>
+        // Simple smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
