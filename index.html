@@ -28,9 +28,25 @@
         },
       };
     </script>
+    <style>
+      /* Custom CSS untuk Marquee/Carousel */
+      @keyframes marquee {
+        0% {
+          transform: translate3d(0, 0, 0);
+        }
+        100% {
+          /* Menggeser 50% dari lebar container untuk looping mulus */
+          transform: translate3d(-50%, 0, 0); 
+        }
+      }
+      .marquee-container {
+        /* Set lebar 200% agar konten asli dan kloning bisa muat */
+        width: 200%; 
+        animation: marquee 40s linear infinite; /* Kecepatan dan pengulangan tak terbatas */
+      }
+    </style>
   </head>
   <body class="font-sans bg-white text-primary">
-    <!-- Navigation -->
     <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
       <div
         class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center"
@@ -78,11 +94,9 @@
       </div>
     </nav>
 
-    <!-- Hero Section -->
     <section id="home" class="min-h-screen pt-20 flex items-center">
       <div class="max-w-6xl mx-auto px-6 py-20">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-          <!-- Text Content -->
           <div class="space-y-6">
             <div
               class="inline-flex items-center px-4 py-2 bg-secondary text-primary rounded-full text-sm font-medium"
@@ -116,37 +130,35 @@
             </div>
           </div>
 
-          <!-- Profile Image -->
           <div class="flex justify-center">
             <div class="relative">
-              <!-- Gradient Circle Background -->
               <div class="absolute inset-0 bg-gradient-to-br from-secondary to-pink-500 rounded-2xl transform rotate-6 scale-105"></div>
               
-              <!-- Foto -->
               <img
                 src="Desain tanpa judul (2).png"
                 alt="Dony Cahyanto"
                 class="relative rounded-2xl w-72 h-96 object-cover object-[center_100%] shadow-2xl"
               />
               
-              <!-- Accent Shape -->
-              <!-- <div
-                class="absolute -bottom-4 -right-4 w-24 h-24 bg-secondary rounded-2xl -z-10"
-              ></div> -->
-            </div>
+              </div>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- About Section -->
-    <!-- About Section - Scalable for Multiple Bootcamps -->
+    <section class="overflow-hidden bg-primary text-white py-4 md:py-6 relative">
+        <div class="relative flex overflow-hidden whitespace-nowrap">
+          
+          <div class="marquee-container flex items-center" id="js-marquee-content">
+            </div>
+        </div>
+    </section>
+
     <section id="about" class="py-20 bg-gray-50">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">About Me</h2>
 
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-start">
-          <!-- Professional Summary -->
           <div class="bg-white p-8 rounded-xl shadow-sm">
             <div class="flex items-center mb-6">
               <div class="w-3 h-3 bg-secondary rounded-full mr-3"></div>
@@ -158,7 +170,8 @@
               menciptakan website yang
               <span class="text-secondary font-medium"
                 >clean, functional, dan user-friendly</span
-              >.
+              >
+             .
             </p>
             <p class="text-gray-600">
               Memiliki foundation kuat dalam
@@ -170,16 +183,13 @@
             </p>
           </div>
 
-          <!-- Education & Skills -->
           <div class="space-y-6">
-            <!-- Bootcamps -->
             <div class="bg-white p-6 rounded-xl shadow-sm">
               <h4 class="font-semibold mb-4 flex items-center">
                 <span class="text-secondary mr-3">🎓</span>
                 Bootcamps & Certifications
               </h4>
               <div class="space-y-4">
-                <!-- Bootcamp 1 -->
                 <div class="border-l-2 border-secondary pl-4">
                   <div class="font-medium text-primary">RevoU</div>
                   <div class="text-sm text-gray-600">
@@ -190,7 +200,6 @@
                   </div>
                 </div>
 
-                <!-- Bootcamp 2 (Placeholder for future) -->
                 <div class="border-l-2 border-gray-300 pl-4 opacity-70">
                   <div class="font-medium text-gray-500">Upcoming Bootcamp (Sanbercode)</div>
                   <div class="text-sm text-gray-400">
@@ -199,7 +208,6 @@
                   <div class="text-xs text-gray-400">2025 • 17 November</div>
                 </div>
 
-                <!-- Bootcamp 3 (Placeholder for future) -->
                 <div class="border-l-2 border-gray-300 pl-4 opacity-70">
                   <div class="font-medium text-gray-500">
                     Upcoming Bootcamp (Hari Senin)
@@ -210,7 +218,6 @@
               </div>
             </div>
 
-            <!-- Core Skills -->
             <div class="bg-white p-6 rounded-xl shadow-sm">
               <h4 class="font-semibold mb-4 flex items-center">
                 <span class="text-secondary mr-3">⚡</span>
@@ -246,7 +253,6 @@
           </div>
         </div>
 
-        <!-- Learning Journey -->
         <div class="mt-12 bg-white p-8 rounded-xl shadow-sm">
           <h3 class="text-xl font-semibold mb-6 text-center">
             My Learning Journey
@@ -278,7 +284,6 @@
       </div>
     </section>
 
-    <!-- Projects Section - IMPROVED -->
     <section id="projects" class="py-20">
       <div class="max-w-6xl mx-auto px-6">
         <h2 class="font-heading text-3xl font-bold text-center mb-4">
@@ -290,7 +295,6 @@
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Project 0 - Sistem Pakar (Featured) -->
           <div class="bg-white border-2 border-secondary rounded-xl p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300">
             <div class="flex items-center mb-3">
               <div class="w-3 h-3 bg-secondary rounded-full mr-2"></div>
@@ -328,7 +332,6 @@
             </div>
           </div>
 
-          <!-- Project 1 - Highlighted -->
           <div
             class="bg-white border-2 border-secondary rounded-xl p-6 shadow-lg transform hover:-translate-y-2 transition-transform duration-300"
           >
@@ -377,131 +380,15 @@
               </a>
             </div>
           </div>
-
-          <!-- Project 2 -->
-          <!-- <div
-            class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
-          >
-            <h3 class="text-xl font-semibold mb-3">Task Management App</h3>
-            <p class="text-gray-600 mb-4">
-              Aplikasi manajemen tugas sederhana dengan fitur CRUD lengkap dan
-              local storage.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >HTML</span
-              >
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >CSS</span
-              >
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >JavaScript</span
-              >
-            </div>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="text-gray-600 font-medium hover:text-secondary transition-colors"
-                >Live Demo</a
-              >
-              <a
-                href="https://github.com/Donycahyanto/todo-app"
-                class="text-gray-600 font-medium hover:text-secondary transition-colors"
-                >GitHub</a
-              >
-            </div>
-          </div> -->
-
-          <!-- Project 3 -->
-          <!-- <div
-            class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
-          >
-            <h3 class="text-xl font-semibold mb-3">Landing Page Business</h3>
-            <p class="text-gray-600 mb-4">
-              Landing page modern untuk business dengan design yang clean dan
-              responsive.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >HTML</span
-              >
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >CSS</span
-              >
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >Tailwind</span
-              >
-            </div>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="text-gray-600 font-medium hover:text-secondary transition-colors"
-                >Live Demo</a
-              >
-              <a
-                href="https://github.com/Donycahyanto/landing-page"
-                class="text-gray-600 font-medium hover:text-secondary transition-colors"
-                >GitHub</a
-              >
-            </div>
-          </div> -->
-
-          <!-- Project 4 -->
-          <!-- <div
-            class="bg-white border border-gray-200 rounded-xl p-6 hover:shadow-lg transition-shadow"
-          >
-            <h3 class="text-xl font-semibold mb-3">Weather App</h3>
-            <p class="text-gray-600 mb-4">
-              Aplikasi cuaca dengan API integration dan responsive interface.
-            </p>
-            <div class="flex flex-wrap gap-2 mb-4">
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >HTML</span
-              >
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >CSS</span
-              >
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >JavaScript</span
-              >
-              <span
-                class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full"
-                >API</span
-              >
-            </div>
-            <div class="flex space-x-4">
-              <a
-                href="#"
-                class="text-gray-600 font-medium hover:text-secondary transition-colors"
-                >Live Demo</a
-              >
-              <a
-                href="https://github.com/Donycahyanto/weather-app"
-                class="text-gray-600 font-medium hover:text-secondary transition-colors"
-                >GitHub</a
-              >
-            </div>
-          </div> -->
         </div>
       </div>
     </section>
 
-    <!-- Contact Section -->
     <section id="contact" class="py-20 bg-gray-50">
       <div class="max-w-4xl mx-auto px-6">
         <h2 class="text-3xl font-bold text-center mb-12">Get In Touch</h2>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <!-- Contact Info -->
           <div class="space-y-6">
             <p class="text-lg text-gray-600">
               I'm always open to discussing new opportunities and interesting
@@ -533,7 +420,6 @@
             </div>
           </div>
 
-          <!-- Contact Form -->
           <div class="bg-white p-6 rounded-xl shadow-sm">
             <form class="space-y-4">
               <input
@@ -563,7 +449,6 @@
       </div>
     </section>
 
-    <!-- Footer -->
     <footer class="py-8 bg-primary text-white text-center">
       <div class="max-w-6xl mx-auto px-6">
         <p>
