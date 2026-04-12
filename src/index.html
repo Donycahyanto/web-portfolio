@@ -4,47 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dony Cahyanto - Junior Web Developer</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+  
   <link
     href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet"
-  />
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          fontFamily: {
-            inter: ['Inter', 'sans-serif'],
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            heading: ['Plus Jakarta Sans', 'system-ui', 'sans-serif'],
-            mono: ['JetBrains Mono', 'monospace'],
-          },
-          colors: {
-            primary: '#333333',
-            secondary: '#fd105e',
-            tertiary: '#474747',
-          },
-        },
-      },
-    };
-  </script>
-  <style>
-    @keyframes marquee {
-      0% {
-        transform: translate3d(0, 0, 0);
-      }
-      100% {
-        transform: translate3d(-50%, 0, 0);
-      }
-    }
-    .marquee-container {
-      width: 200%;
-      animation: marquee 40s linear infinite;
-    }
-  </style>
+    rel="stylesheet"/>
+  <link href="../dist/output.css" rel="stylesheet" />
 </head>
 <body class="font-sans bg-white text-primary">
-  <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50 border-b">
+  <nav class="fixed w-full bg-white/90 backdrop-blur-sm z-50">
     <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
       <div class="text-xl font-bold">
         My <span class="text-secondary">Portfolio.</span>
@@ -91,7 +58,7 @@
         <div class="flex justify-center">
           <div class="relative">
             <div class="absolute inset-0 bg-gradient-to-br from-secondary to-pink-500 rounded-2xl transform rotate-6 scale-105"></div>
-            <img src="Desain tanpa judul (2).png" alt="Dony Cahyanto" class="relative rounded-2xl w-72 h-96 object-cover object-[center_100%] shadow-2xl" />
+            <img src="../Desain tanpa judul (2).png" alt="Dony Cahyanto" class="relative rounded-2xl w-72 h-96 object-cover object-[center_100%] shadow-2xl" />
           </div>
         </div>
       </div>
@@ -153,7 +120,7 @@
 
               <!-- Sanbercode -->
               <div class="border-l-2 border-gray-300 pl-4">
-                <div class="font-medium text-primary">Bootcamp (Sanbercode)</div>
+                <div class="font-medium text-primary">Sanbercode</div>
                 <div class="text-sm text-gray-600">React JS - Web Frontend Development</div>
                 <div class="text-xs text-gray-500">2025 • 17 November</div>
               </div>
@@ -350,6 +317,6 @@
     </script>
   </footer>
 
-  <script src="js/script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>

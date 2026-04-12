@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", "sans-serif";
+  --font-heading: "Plus Jakarta Sans", "system-ui", "sans-serif";
+  --font-mono: "JetBrains Mono", "monospace";
+
+  --color-primary: #333333;
+  --color-secondary: #fd105e;
+  --color-tertiary: #474747;
+}
+
+/* Custom CSS untuk Marquee kamu */
+@keyframes marquee {
+  0% { transform: translate3d(0, 0, 0); }
+  100% { transform: translate3d(-50%, 0, 0); }
+}
+
+.marquee-container {
+  width: 200%;
+  animation: marquee 40s linear infinite;
+}
