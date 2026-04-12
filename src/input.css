@@ -51,5 +51,7 @@
 .marquee-container {
   display: flex;
   width: max-content;
-  animation: marquee-scroll 20s linear infinite;
+  animation: marquee-scroll 30s linear infinite;
+  will-change: transform;
+  transform: translateZ(0);
 }
