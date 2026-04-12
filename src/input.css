@@ -11,12 +11,17 @@
 }
 
 /* Custom CSS untuk Marquee kamu */
-@keyframes marquee {
-  0% { transform: translate3d(0, 0, 0); }
-  100% { transform: translate3d(-50%, 0, 0); }
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .marquee-container {
-  width: 200%;
-  animation: marquee 40s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 20s linear infinite;
 }
